@@ -4,23 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4CAF50"
+    android:background="@android:color/background_light"
     tools:context=".SpinnerActivity">
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="392dp"
         android:text="(sin punto ni guiones)"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="398dp" />
+        app:layout_constraintEnd_toStartOf="@+id/txtrut"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="316dp"
+        android:layout_marginTop="320dp"
         android:text="Ingrese su apellido materno:"
         app:layout_constraintEnd_toStartOf="@+id/txtmaterno"
         app:layout_constraintHorizontal_bias="0.5"
@@ -39,9 +42,9 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView3"
@@ -81,9 +84,12 @@
         android:id="@+id/textView7"
         android:layout_width="223dp"
         android:layout_height="22dp"
+        android:layout_marginTop="372dp"
         android:text="Introduzca su rut:"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="372dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView8"
@@ -144,42 +150,14 @@
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/cbmasculino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="93dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="110dp"
-        android:text="Masculino"
-        app:layout_constraintBottom_toTopOf="@+id/btnregistro"
-        app:layout_constraintEnd_toStartOf="@+id/cbfemino"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <CheckBox
-        android:id="@+id/cbfemino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="117dp"
-        android:layout_marginBottom="191dp"
-        android:text="femenino"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cbmasculino"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
     <Button
         android:id="@+id/btnregistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="652dp"
+        android:layout_marginTop="592dp"
         android:text="Registrar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -190,17 +168,53 @@
         android:layout_marginTop="552dp"
         android:text="Valorar registro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toEndOf="@+id/btnregistro"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="242dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="580dp"
+        android:id="@+id/rating"
+        android:layout_width="235dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="588dp"
+        android:scrollbarSize="2dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/caca"
+        android:layout_width="414dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="484dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbmasculino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/rbfemenino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Femenino" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="214dp"
+        android:layout_height="89dp"
+        android:layout_marginEnd="197dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/laweabuema" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
